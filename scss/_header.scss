@@ -1,0 +1,89 @@
+@use "variables" as *;
+
+header {
+    font-family: $font-headings;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $color-dark-gray;
+    color: $color-white;
+    padding: 1rem 2rem;
+
+    .logo {
+        width: 80px;
+        height: auto;
+        max-height: 80px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 3px;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: $color-medium-gray;
+                color: $color-white;
+            }
+
+            &:focus {
+                outline: 2px solid $color-white;
+                outline-offset: 2px;
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    // Estilos responsivos
+    @media (max-width: 600px) {
+        flex-direction: column;
+        padding: 1rem;
+
+        h1 {
+            font-size: 1.25rem;
+        }
+
+        nav {
+            gap: 10px;
+
+            a {
+                font-size: 1rem;
+                padding: 3px 5px;
+            }
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+        padding: 1rem 1.5rem;
+
+        h1 {
+            font-size: 1.4rem;
+        }
+
+        nav {
+            gap: 12px;
+
+            a {
+                font-size: 1.05rem;
+                padding: 4px 8px;
+            }
+        }
+    }
+}

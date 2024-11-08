@@ -1,0 +1,159 @@
+@use 'variables'as *;
+
+// Estilos comunes
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: $color-white;
+    color: $color-dark-gray;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+// Estilos para la sección de noticias
+.noticias {
+    flex: 3;
+    padding: 1rem;
+
+    .noticia {
+        border-bottom: 0.1rem solid $color-border-gray;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0;
+    }
+}
+
+// Estilos para el aside
+aside {
+    flex: 1;
+    background-color: $color-secondary-background;
+
+    h3 {
+        font-family: $font-headings;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $color-dark-gray;
+    }
+
+    ul {
+        list-style-type: auto;
+
+        li {
+            margin: 0.5rem;
+
+            a {
+                text-decoration: none;
+                color: $color-primary;
+                font-weight: 600;
+
+                &:hover {
+                    color: $color-primary-hover;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// Estilos base para móviles (hasta 600px)
+@media (max-width: 600px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .noticias {
+        padding: 0.5rem;
+    }
+
+    aside {
+        padding: 0.5rem;
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+// Estilos para tabletas (601px a 1024px)
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    main {
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .noticias {
+        padding: 1rem;
+    }
+
+    aside {
+        padding: 1.5rem;
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+        }
+    }
+}
+
+// Estilos para escritorios (más de 1024px)
+@media (min-width: 1025px) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    .noticias {
+        padding: 1.5rem;
+    }
+
+    aside {
+        padding: 1.5rem;
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+}

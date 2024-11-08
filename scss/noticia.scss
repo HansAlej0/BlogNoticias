@@ -1,0 +1,102 @@
+@use 'variables' as *;
+
+article {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    line-height: 1.8;
+    color: $color-dark-gray;
+
+    h2 {
+        color: $color-dark-gray;
+        font-family: $font-headings;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 1em;
+    }
+
+    .imagen-noticia {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    p {
+        font-family: $font-paragraphs;
+        font-weight: 400;
+        font-size: 1.1rem;
+        margin-bottom: 1em;
+        color: $color-medium-gray;
+    }
+
+    em {
+        color: $color-accent-orange;
+    }
+
+    a {
+        font-family: $font-body;
+        font-size: 1.1rem;
+        color: $color-primary;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+
+        &:hover {
+            color: $color-primary-hover;
+            text-decoration: underline;
+        }
+
+        &:focus {
+            outline: 0.2rem solid $color-primary;
+            outline-offset: 0.2rem;
+        }
+    }
+}
+
+// Estilos responsivos
+@media (max-width: 600px) {
+    article {
+        max-width: 100%;
+        padding: 1em;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    article {
+        max-width: 90%;
+        padding: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    article {
+        max-width: 800px;
+        padding: 2em;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
