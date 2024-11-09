@@ -7,16 +7,15 @@ footer {
     padding: 1.5rem 2rem;
     font-size: 1.2rem;
     margin-top: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 
     p {
         font-family: $font-paragraphs;
         font-weight: 400;
         margin: 0;
-        margin-top: 0.5rem;
+        font-size: 1rem; 
     }
 
     // Estilos responsivos

@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 article {
     max-width: 800px;
@@ -7,6 +7,11 @@ article {
     padding: 2em;
     line-height: 1.8;
     color: $color-dark-gray;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "image";
+    gap: 1em;
 
     h2 {
         color: $color-dark-gray;
@@ -14,6 +19,7 @@ article {
         font-weight: 700;
         font-size: 2rem;
         margin-bottom: 1em;
+        grid-area: title;
     }
 
     .imagen-noticia {
@@ -21,6 +27,7 @@ article {
         height: auto;
         margin-bottom: 20px;
         display: block;
+        grid-area: image;
     }
 
     p {
@@ -28,6 +35,7 @@ article {
         font-weight: 400;
         font-size: 1.1rem;
         margin-bottom: 1em;
+        max-width: 40em;  
         color: $color-medium-gray;
     }
 
@@ -40,7 +48,7 @@ article {
         font-size: 1.1rem;
         color: $color-primary;
         text-decoration: none;
-        font-weight: 700;
+        font-weight: 500;
         transition: color 0.3s ease, text-decoration 0.3s ease;
 
         &:hover {
@@ -55,7 +63,7 @@ article {
     }
 }
 
-// Estilos responsivos
+// Estilos Responsivos
 @media (max-width: 600px) {
     article {
         max-width: 100%;
@@ -68,6 +76,7 @@ article {
 
     p {
         font-size: 1rem;
+        line-height: 1.6;  
     }
 }
 
